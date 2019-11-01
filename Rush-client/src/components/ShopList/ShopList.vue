@@ -5,7 +5,7 @@
           :key="index" @click="$router.push('/shop')">
         <a>
           <div class="shop_left">
-            <img class="shop_img" :src="baseImgUrl+shop.image_path">
+            <img class="shop_img" :src="baseImgUrl+shop.image_path+baseIMGurl">
           </div>
           <div class="shop_right">
             <section class="shop_detail_header">
@@ -56,7 +56,8 @@
   export default {
     data () {
       return {
-        baseImgUrl: 'http://cangdu.org:8001/img/'
+        baseImgUrl: 'https://cube.elemecdn.com/',
+        baseIMGurl: '?x-oss-process=image/format,webp/resize,w_130,h_130,m_fixed'
       }
     },
     computed: {

@@ -11,7 +11,7 @@
         <router-link :to="{path:'/shop', query:{id:item.id}}" tag="li"
                      v-for="item in searchShops" :key="item.id" class="list_li">
           <section class="item_left">
-            <img :src="imgBaseUrl + item.image_path" class="restaurant_img">
+            <img :src="imgBaseUrl + item.image_path + IMGbaseurl" class="restaurant_img">
           </section>
           <section class="item_right">
             <div class="item_right_text">
@@ -38,7 +38,8 @@
     data () {
       return {
         keyword: '',
-        imgBaseUrl: 'http://cangdu.org:8001/img/',
+        imgBaseUrl: 'https://cube.elemecdn.com/',
+        IMGbaseurl: '?x-oss-process=image/format,webp/resize,w_130,h_130,m_fixed',
         noSearchShops: false
       }
     },
